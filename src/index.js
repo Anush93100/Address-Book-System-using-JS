@@ -5,17 +5,22 @@ const addressBook = new AddressBook();
 
 try {
     const contact1 = new Contact(
-        "Anush", "Tenguriya", "Bhopal", "India", "In", "3245", "1234567890", "helloworld123@gmail.com"
+        "Anush", "Tenguriya", "Bhopal", "India", "In", "3245", "1234567890", "helloworld@gmail.com"
     );
-    console.log(addressBook.addContact(contact1));
-    console.log(addressBook.getAllContacts());
+    console.log(addressBook.addContact(contact1)); 
+
+    const contact2 = new Contact(
+        "Anush", "Tengu", "Indore", "India","In","1004500","4991188633","helloworldd@gmail.com"
+    )
+    console.log(addressBook.addContact(contact2)); 
+    console.log("All Contacts", addressBook.getAllContacts());
 } catch (error) {
     console.error("Error:", error.message);
 }
 
 try {
     const invalidContact = new Contact(
-        "Ojas", "JOhar", "abctt", "In", "I", "100A01", "12345", "invalid-email"
+        "Man", "pat", "abc", "In", "I", "767A5", "12345", "invalid-email"
     );
     console.log(addressBook.addContact(invalidContact));
 } catch (error) {
