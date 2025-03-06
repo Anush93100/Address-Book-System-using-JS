@@ -16,9 +16,9 @@ try {
     )
     console.log(addressBook.addContact(contact2)); 
     console.log("All Contacts Before editing", addressBook.getAllContacts());
-    console.log(addressBook.editContact("Ojas", { address: "Raura", city: "New London", phone: "9284567890" }));
+    console.log(addressBook.editContact("Anush", { address: "Raura", city: "New London", phone: "9284567890" }));
     console.log("All Contacts After editing", addressBook.getAllContacts());
-    console.log(addressBook.deleteContact("Ojas"));
+    console.log(addressBook.deleteContact("Anush"));
     console.log("All Contacts After Deleting:", addressBook.getAllContacts());
     console.log("Total Contacts:", addressBook.countContacts()); 
 
@@ -29,8 +29,13 @@ try {
 
     console.log("Contacts in India:");
     console.log(addressBook.searchByCityOrState("Bhopal"));
+
     console.log("Viewing Persons by City or State:");
     console.log(addressBook.viewPersonsByCityOrState());
+
+    
+    console.log("Count of Contacts by City and State:");
+    console.log(addressBook.countByCityOrState());
 
 } catch (error) {
     console.error("Error:", error.message);
